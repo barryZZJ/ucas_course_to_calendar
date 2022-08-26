@@ -47,6 +47,22 @@
 
 导入时建议新建一个日历账户，这样可以跟自己手动添加的日程区分开，方便统一隐藏或删除，还能设置不同颜色。
 
+## 使用Python运行
+
+### 配置环境
+
+```sh
+pip install requests
+pip install beautifulsoup4
+pip install
+```
+
+### 运行脚本
+
+```sh
+python3 main.py
+```
+
 ## 结语
 
 [![](https://img.shields.io/github/followers/BarryZZJ.svg?style=social&label=Follow&maxAge=2592000)](https://github.com/barryZZJ) 关注我，方便获取最新脚本动态~
