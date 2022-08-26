@@ -5,10 +5,12 @@
 ## 效果展示
 
 - 脚本运行过程：
+
   <img src="/demo/demo.jpg" style="zoom:67%;" />
 
 - 导入手机后的效果：
-  <img src="/demo/demo2.jpg" style="zoom:25%;" />
+
+  <img src="/demo/demo2.jpg" style="width:300px;" />
 
 
 
