@@ -5,10 +5,10 @@
 ## 效果展示
 
 - 脚本运行过程：
-  ![](/demo/demo.jpg)
+  <img src="/demo/demo.jpg" style="zoom:67%;" />
 
 - 导入手机后的效果：
-  ![](/demo/demo2.jpg)
+  <img src="/demo/demo2.jpg" style="zoom:25%;" />
 
 
 
