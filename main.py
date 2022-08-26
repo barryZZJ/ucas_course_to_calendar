@@ -2,30 +2,28 @@ import os
 import requests as r
 from datetime import datetime
 from bs4 import BeautifulSoup
-import argparse
 
 from coursecalendar import Calendar
 from httpRequestUtil_contextmanager import httpRequest
 
-parser = argparse.ArgumentParser()
-parser.add_argument('firstdayofterm', type=str, help="学期第一天的日期，年月日用'.'隔开，如2022.8.22", metavar='DATE')
-parser.add_argument('jsessionid', type=str, help="jwxk.ucas.ac.cn域名下名为JSESSIONID的cookie的值")
-parser.add_argument('-o', '--output', type=str, default='courses.ics', help="输出文件名")
-args = parser.parse_args()
 
 def error(msg):
     print(msg)
+    os.system('pause')
     exit()
+
+firstdayofterm = input("学期第一天的年月日，用'.'隔开，如2022.8.22：")
+jsessionid = input('JSESSIONID：')
 
 host = 'https://jwxk.ucas.ac.cn'
 url = host + '/courseManage/main'
 
 s = r.Session()
 cookies = {
-    'JSESSIONID': args.jsessionid # jwxk.ucas.ac.cn
+    'JSESSIONID': jsessionid # jwxk.ucas.ac.cn
 }
 
-firstday = datetime(*map(int, args.firstdayofterm.split('.')))
+firstday = datetime(*map(int, firstdayofterm.split('.')))
 calendar = Calendar(firstday)
 
 with httpRequest(s, url, 'get', cookies=cookies) as resp:
@@ -55,8 +53,9 @@ with httpRequest(s, url, 'get', cookies=cookies) as resp:
             for time, place, week in groups:
                 calendar.appendCourse(courseId, courseName, time, place, week, teacherName)
 
-print('解析完成，正在生成文件' + args.output)
-calendar.to_ics(args.output)
-print('成功！\n\n通过邮件等方式发送到手机后，即可导入到手机日历，安卓苹果通用。\n导入时建议新建一个日历账户，这样方便统一删除以及颜色区分。')
+print('解析完成，正在生成文件' + 'courses.ics')
+calendar.to_ics('courses.ics')
+print('成功！\n\n通过邮件等方式发送到手机后，即可导入到手机日历，安卓苹果通用。\n导入时建议新建一个日历账户，这样方便统一删除以及颜色区分。\n')
+os.system('pause')
 
 

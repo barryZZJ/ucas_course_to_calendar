@@ -32,15 +32,9 @@
 ### 运行脚本
 
 1. 进入[releases页面](https://github.com/barryZZJ/ucas_course_to_calendar/releases)下载可执行文件；
-2. 使用命令行启动，并添加两个参数，分别为本学期第一天的年月日，以及JSESSIONID的值。示例：
-    ```powershell
-    course_to_calendar.exe 2022.8.22 C2BXXXX
-    ```
+2. 启动后根据提示分别输入本学期第一天的年月日，以及JSESSIONID的值。
     可选参数：`-o FILE`，可指定输出文件名，默认为`courses.ics`。
-
-    完整说明可执行`course_to_calendar.exe -h`查看。
-
-3. 获得`.ics`文件。
+3. 脚本同目录下获得`courses.ics`文件。
 
 ### 导入手机
 
