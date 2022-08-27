@@ -35,7 +35,7 @@ class Calendar:
         '_',
         time(9, 20), time(10, 10), time(11, 20), time(12, 10),
         time(14, 20), time(15, 10), time(16, 20), time(17, 10),
-        time(19, 0), time(19, 50), time(21, 0), time(19, 50)
+        time(19, 0), time(19, 50), time(21, 0), time(21, 50)
     ]
     char2int = { "一": 1, "二": 2, "三": 3, "四": 4, "五": 5, "六": 6, "七": 7, "日": 7, "天": 7 }
     def __init__(self, first_day_of_term):

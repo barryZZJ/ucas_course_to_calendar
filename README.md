@@ -63,6 +63,14 @@ pip install
 python3 main.py
 ```
 
+## Cahngelog
+
+`v1.2`: 修复了第12节课时长显示出错的BUG。
+
+`v1.1`: 降低使用门槛，获取用户信息写在了运行脚本之后。
+
+`v1.0`: 初版
+
 ## 结语
 
 [![](https://img.shields.io/github/followers/BarryZZJ.svg?style=social&label=Follow&maxAge=2592000)](https://github.com/barryZZJ) 关注我，方便获取最新脚本动态~
