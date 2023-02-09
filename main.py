@@ -2,10 +2,14 @@ import os
 import requests as r
 from datetime import datetime
 from bs4 import BeautifulSoup
+import argparse
 
 from coursecalendar import Calendar
 from httpRequestUtil_contextmanager import httpRequest
 
+parser = argparse.ArgumentParser()
+parser.add_argument('--output', '-o', default='courses')
+args = parser.parse_args()
 
 def error(msg):
     print(msg)
@@ -53,8 +57,8 @@ with httpRequest(s, url, 'get', cookies=cookies) as resp:
             for time, place, week in groups:
                 calendar.appendCourse(courseId, courseName, time, place, week, teacherName)
 
-print('解析完成，正在生成文件' + 'courses.ics')
-calendar.to_ics('courses.ics')
+print('解析完成，正在生成文件' + args.output + '.ics')
+calendar.to_ics(args.output + '.ics')
 print('成功！\n\n通过邮件等方式发送到手机后，即可导入到手机日历，安卓苹果通用。\n导入时建议新建一个日历账户，这样方便统一删除以及颜色区分。\n')
 os.system('pause')
 
