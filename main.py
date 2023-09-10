@@ -19,7 +19,7 @@ def error(msg):
 firstdayofterm = input("学期第一天的年月日，用'.'隔开，如2022.8.22：")
 jsessionid = input('JSESSIONID：')
 
-host = 'https://jwxk.ucas.ac.cn'
+host = 'https://jwxkts2.ucas.ac.cn'
 url = host + '/courseManage/main'
 
 s = r.Session()
