@@ -26,15 +26,15 @@
 
 1. 浏览器进入选课系统
 2. 按`F12`打开开发者工具
-3. 如图（以chrome为例），依次找到`Application - Cookies - JSESSIONID`（注意对应的域名要选`jwxk.ucas.ac.cn`的）：
-![](/demo/cookie.jpg)
+3. 如图（以chrome为例），依次找到`Application - Cookies - SESSION`（注意对应的域名要选`xkcts.ucas.ac.cn`的）：
+![](/demo/cookie.png)
 
 
 
 ### 运行脚本
 
 1. 进入[releases页面](https://github.com/barryZZJ/ucas_course_to_calendar/releases)下载可执行文件；
-2. 启动后根据提示分别输入本学期第一天的年月日，以及JSESSIONID的值。
+2. 启动后根据提示分别输入本学期第一天的年月日，以及SESSION的值。
     可选参数：`-o FILE`，可指定输出文件名，默认为`courses.ics`。
 3. 脚本同目录下获得`courses.ics`文件。
 
