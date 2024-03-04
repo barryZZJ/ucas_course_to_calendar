@@ -16,15 +16,15 @@ def error(msg):
     os.system('pause')
     exit()
 
-firstdayofterm = input("学期第一天的年月日，用'.'隔开，如2022.8.22：")
-jsessionid = input('JSESSIONID：')
+firstdayofterm = input("学期第一天的年月日，用'.'隔开，如2024.2.26：")
+session = input('SESSION：')
 
-host = 'https://jwxkts2.ucas.ac.cn'
+host = 'https://xkcts.ucas.ac.cn'
 url = host + '/courseManage/main'
 
 s = r.Session()
 cookies = {
-    'JSESSIONID': jsessionid # jwxk.ucas.ac.cn
+    'SESSION': session # xkcts.ucas.ac.cn
 }
 
 firstday = datetime(*map(int, firstdayofterm.split('.')))
